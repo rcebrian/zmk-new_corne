@@ -46,6 +46,15 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Mod3 {
+            bindings = <&mo 3>;
+            key-positions = <43 46>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,10 +73,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &kp UP_ARROW                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &kp LEFT_ARROW  &kp ENTER       &kp RIGHT_ARROW  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &kp DOWN_ARROW                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp DELETE       &none            &trans
+&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                   &kp PAGE_UP             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0  &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &kp HOME  &mkp LCLK      &kp END  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &none   &none
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE              &kp PAGE_DOWN           &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none   &none
+                                         &trans        &trans        &trans                                                           &kp DELETE       &none            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
